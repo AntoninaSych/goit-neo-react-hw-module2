@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Feedback from './components/Feedback/Feedback';
 import Options from './components/Options/Options';
 import Notification from './components/Notification/Notification';
+import Description from './components/Description/Description';
 
 function App() {
     const [feedback, setFeedback] = useState(() => {
@@ -39,7 +40,7 @@ function App() {
 
     return (
         <div>
-            <h1>Sip Happens Café</h1>
+            <Description />
             <Options updateFeedback={updateFeedback} resetFeedback={resetFeedback} totalFeedback={totalFeedback} />
             {totalFeedback === 0 ? (
                 <Notification message="No feedback given" />
