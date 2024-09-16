@@ -4,6 +4,7 @@ import Options from './components/Options/Options';
 import Notification from './components/Notification/Notification';
 import Description from './components/Description/Description';
 
+
 function App() {
     const [feedback, setFeedback] = useState(() => {
         const savedFeedback = localStorage.getItem('feedback');
@@ -40,10 +41,10 @@ function App() {
 
     return (
         <div>
-            <Description />
-            <Options updateFeedback={updateFeedback} resetFeedback={resetFeedback} totalFeedback={totalFeedback} />
+            <Description/>
+            <Options updateFeedback={updateFeedback} resetFeedback={resetFeedback} totalFeedback={totalFeedback}/>
             {totalFeedback === 0 ? (
-                <Notification message="No feedback given" />
+                <Notification message="No feedback given"/>
             ) : (
                 <Feedback
                     good={feedback.good}
